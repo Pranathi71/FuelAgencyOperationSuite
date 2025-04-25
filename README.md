@@ -1,55 +1,74 @@
-FuelPro - Fuel Agency Operation Suite
-FuelPro is a web-based system designed for managing customers, suppliers, cylinders, and generating reports for a fuel agency. It allows admins to manage customer and supplier data, track cylinder inventories, and generate reports. Customers can easily book cylinders and view their booking history.
 
-Features
-Admin Features:
-Customer Management: Add, edit, and delete customer profiles.
 
-Supplier Management: Add, edit, and manage supplier details.
 
-Cylinder Management: Track and manage available cylinders, assign to customers, and update inventory.
+# 🚀 **FuelPro - Fuel Agency Operation Suite**
 
-Booking Management: Admins can view and manage all customer bookings.
+**FuelPro** is a web-based system designed for managing **customers**, **suppliers**, **cylinders**, and generating **reports** for a fuel agency.
 
-Reports: Generate reports for customer bookings, inventory status, and supplier details.
+It allows:
+- Admins to manage customer and supplier data, track cylinder inventories, and generate reports.
+- Customers to easily book cylinders and view their booking history.
 
-Email : Automatic email is triggered for every action.
+---
 
-Customer Features:
-Cylinder Booking: Customers can book cylinders through the system.
+## 🔧 **Features**
 
-View Booking: Customers can view the status of their bookings , delivery details and track their previous bookings.
+### 🛠️ **Admin Features**
+- **Customer Management**: Add, edit, and delete customer profiles.
+- **Supplier Management**: Add, edit, and manage supplier details.
+- **Cylinder Management**: Track and manage available cylinders, assign to customers, and update inventory.
+- **Booking Management**: View and manage all customer bookings.
+- **Reports**: Generate reports for customer bookings, inventory status, and supplier details.
+- **Email**: Automatic email is triggered for every action.
 
-Email : booking details are sent to mail for confirmation purpose.
+### 👥 **Customer Features**
+- **Cylinder Booking**: Customers can book cylinders through the system.
+- **View Booking**: View status of bookings, delivery details, and booking history.
+- **Email**: Booking details are sent via email for confirmation.
 
-# these are the steps to run FuelPro
+---
 
-**step 1 :**
-Install necesaary packages in both Frontend and Backend. Run this
+## 🧪 **Steps to Run FuelPro**
 
-```
+### ✅ **Step 1: Install Necessary Packages**
+
+Run the following command in both **Frontend** and **Backend** project directories:
+
+```bash
 mvn clean install
 ```
 
-command in project directory. make sure there should be no previous data or table in FuelAgency database which you create in your mysql database. If you set the password for your database once check `application.properties` file in Backend project.
+📌 **Note**:  
+- Make sure no previous data/tables exist in the `FuelAgency` database.  
+- Update the `application.properties` file with the correct database credentials.
 
-**step 2 :**
-for running the Frontend and backend project from terminal use this command
+---
 
-```
+### 🚀 **Step 2: Run the Project**
+
+Run this command to start both frontend and backend:
+
+```bash
 mvn clean spring-boot:run
 ```
 
-Remember to start mysql and apache if you are using XAMPP.
+💡 Ensure **MySQL** and **Apache** are running if you’re using **XAMPP**.
 
-**step 3 :**
-create dummy data using POSTMAN in customer and cylinder table. Hit these API endpoints as mention below.
+---
 
-### POST http://localhost:8080/api/users
+### 🧪 **Step 3: Create Dummy Data Using POSTMAN**
 
-JSON
+Use **POSTMAN** to send dummy data to your backend.
 
+#### Endpoint:
+
+```http
+POST http://localhost:8080/api/users
 ```
+
+#### JSON Body:
+
+```json
 {
   "firstName": "Pranathi",
   "lastName": "Tatavarthi",
@@ -62,10 +81,23 @@ JSON
 }
 ```
 
-### go to http://localhost:1000/ and login as admin with userId and password which where sent on email
+---
 
-### and can be viewed in postman after creating admin with json to first create customer from customer management,
+## 🌐 **Accessing the Application**
 
-### and then create supplier from supplier management and then add cylinder from cylinder management and
+- Open: [http://localhost:1000/](http://localhost:1000/)
+- Login as **Admin** using the credentials (User ID and Password) received via email.
 
-### then login as a customer with customerId and Password which sent on email.
+---
+
+## ⚙️ **Workflow Summary**
+
+1. Create a **Customer** from Customer Management.
+2. Add a **Supplier** from Supplier Management.
+3. Add a **Cylinder** from Cylinder Management.
+4. Login as **Customer** using credentials sent via email.
+
+---
+
+✨ Enjoy managing your fuel agency with **FuelPro**!
+
